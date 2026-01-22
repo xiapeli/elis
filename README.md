@@ -10,40 +10,56 @@
 ║   ███████╗███████╗██║███████║                                                ║
 ║   ╚══════╝╚══════╝╚═╝╚══════╝                                                ║
 ║                                                                               ║
+║   "Nada sera como antes, amanha"                                             ║
+║                                                                               ║
 ║   Multi-Agent Orchestrator for World-Class One-Page Websites                 ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
 
-> Um orquestrador multi-agente que coordena 10+ agentes especializados para criar websites one-page de classe mundial - do discovery ao deploy.
+> Em homenagem a **Elis Regina** (1945-1982), a maior cantora do Brasil, conhecida como "Pimentinha" e "A Voz do Brasil". Assim como Elis regia palcos com intensidade e perfeicao, este orquestrador rege agentes de IA para criar obras digitais de classe mundial.
 
-## O que é o Elis?
+## A Filosofia Elis
 
-**Elis** é um skill para [Claude Code](https://claude.ai/code) que transforma o Claude em um maestro de uma orquestra de agentes especializados. Em vez de fazer tudo sozinho, o Elis delega tarefas para subagentes especializados através de **contratos JSON** bem definidos.
+Elis Regina nao era apenas uma cantora - ela era uma **regente** de emocoes. Cada performance era uma orquestracao perfeita de voz, banda, arranjo e alma. Ela exigia excelencia de si mesma e de todos ao redor.
 
-### Arquitetura
+**Elis** (o orquestrador) carrega esse espirito:
+
+- **Excelencia sem compromisso** - Cada output deve ser digno de awwwards.com
+- **Orquestracao perfeita** - Cada agente entra no momento certo, com o contexto certo
+- **Alma no trabalho** - Nao e so codigo, e arte digital
+- **Intensidade** - Entrega completa, do discovery ao deploy
+
+> *"Eu nao sei viver sem paixao"* - Elis Regina
+
+## O que e o Elis?
+
+**Elis** e um skill para [Claude Code](https://claude.ai/code) que transforma o Claude em um maestro de uma orquestra de agentes especializados. Assim como Elis Regina regia suas performances com precisao e paixao, este orquestrador coordena 10+ agentes para criar websites one-page de classe mundial.
+
+### Arquitetura - A Orquestra
 
 ```
                               ┌─────────────────────┐
                               │       ELIS          │
-                              │    (Opus 4.5)       │
-                              │   Contract Manager  │
-                              │   State Machine     │
-                              │   Quality Gates     │
+                              │   A Regente (Opus)  │
+                              │                     │
+                              │  "Como nossa voz    │
+                              │   principal, eu     │
+                              │   coordeno tudo"    │
                               └──────────┬──────────┘
                                          │
            ┌─────────────────────────────┼─────────────────────────────┐
            │                             │                             │
     ┌──────┴──────┐               ┌──────┴──────┐               ┌──────┴──────┐
-    │   LAYER 1   │               │   LAYER 2   │               │   LAYER 3   │
+    │   NAIPE 1   │               │   NAIPE 2   │               │   NAIPE 3   │
     │  Discovery  │               │   Design    │               │    Build    │
-    │ Scout+Anal. │               │ Design+UXer │               │Build+Test   │
+    │   Cordas    │               │   Sopros    │               │  Percussao  │
     └─────────────┘               └─────────────┘               └─────────────┘
            │                             │                             │
     ┌──────┴──────┐               ┌──────┴──────┐               ┌──────┴──────┐
-    │   LAYER 4   │               │   LAYER 5   │               │   LAYER 6   │
+    │   NAIPE 4   │               │   NAIPE 5   │               │   NAIPE 6   │
     │   Backend   │               │    Deploy   │               │  Business   │
-    │  Supabase   │               │   Vercel    │               │   Stripe    │
+    │   Metais    │               │   Teclados  │               │    Vocal    │
     └─────────────┘               └─────────────┘               └─────────────┘
 ```
 
@@ -82,7 +98,7 @@ cp elis/elis.md ~/.claude/commands/elis.md
 ### Quick Start
 
 ```bash
-# Pipeline completo com todas as opcoes
+# Pipeline completo - a performance inteira
 /elis full "Landing page para meu SaaS de produtividade" \
   --reference https://linear.app \
   --stack next \
@@ -99,10 +115,10 @@ cp elis/elis.md ~/.claude/commands/elis.md
 /elis analyze https://vercel.com
 ```
 
-O Elis vai:
-1. Delegar para o **Scout** pesquisar o mercado
-2. Delegar para o **Designer** extrair o design system
-3. Sintetizar um relatorio completo
+Elis vai reger:
+1. **Scout** (primeiro violino) - pesquisa o mercado
+2. **Designer** (flauta) - extrai o design system
+3. **Sintese** - harmoniza tudo em um relatorio
 
 #### Criar design do zero
 
@@ -110,11 +126,11 @@ O Elis vai:
 /elis design "App de meditacao para profissionais ocupados" --style minimal
 ```
 
-O Elis vai:
-1. **Scout**: Pesquisar competidores (Calm, Headspace, etc.)
-2. **Designer**: Criar design system completo
-3. **UXer**: Validar UX e acessibilidade
-4. Apresentar para aprovacao
+A performance:
+1. **Scout**: Abertura - pesquisa competidores
+2. **Designer + UXer**: Dueto - design e validacao em paralelo
+3. **Aprovacao**: Pausa dramatica - usuario aprova
+4. **Finale**: Entrega do design system
 
 #### Pipeline completo
 
@@ -122,79 +138,72 @@ O Elis vai:
 /elis full "Landing para startup de IA" --reference https://anthropic.com --stack next
 ```
 
-Pipeline executado:
+Sinfonia completa em 6 movimentos:
 ```
-Discovery → Design → Approval → Build → Test → Deploy → Launch
+I. Discovery → II. Design → III. Approval → IV. Build → V. Deploy → VI. Launch
 ```
 
-## Agentes Disponiveis
+## Os Musicos - Agentes Especializados
 
-### Layer 1: Discovery
-| Agente | Modelo | Funcao |
-|--------|--------|--------|
-| Scout | Haiku | Pesquisa de mercado, competidores, viabilidade |
-| Analyzer | Haiku | Analise tecnica de sites |
+### Naipe 1: Discovery (Cordas)
+| Musico | Instrumento | Funcao |
+|--------|-------------|--------|
+| Scout | Primeiro Violino | Pesquisa, competidores, viabilidade |
+| Analyzer | Segundo Violino | Analise tecnica detalhada |
 
-### Layer 2: Design
-| Agente | Modelo | Funcao |
-|--------|--------|--------|
-| Designer | Sonnet | Design system, cores, tipografia, componentes |
-| UXer | Sonnet | Validacao UX, heuristicas, acessibilidade |
-| Animator | Sonnet | Motion design, animacoes, micro-interacoes |
+### Naipe 2: Design (Sopros)
+| Musico | Instrumento | Funcao |
+|--------|-------------|--------|
+| Designer | Flauta | Design system, cores, tipografia |
+| UXer | Clarinete | Validacao UX, acessibilidade |
+| Animator | Obo | Motion design, animacoes |
 
-### Layer 3: Build
-| Agente | Modelo | Funcao |
-|--------|--------|--------|
-| Builder | Sonnet | Implementacao frontend (HTML/React/Next/Astro) |
-| Tester | Sonnet | QA, E2E tests, visual regression |
+### Naipe 3: Build (Percussao)
+| Musico | Instrumento | Funcao |
+|--------|-------------|--------|
+| Builder | Timpano | Implementacao frontend |
+| Tester | Caixa | QA, E2E tests |
 
-### Layer 4: Backend
-| Agente | Modelo | Funcao |
-|--------|--------|--------|
-| Supabase | Sonnet | Database, RLS, Edge Functions, Auth |
+### Naipe 4: Backend (Metais)
+| Musico | Instrumento | Funcao |
+|--------|-------------|--------|
+| Supabase | Trompete | Database, Auth, Storage |
 
-### Layer 5: Deploy
-| Agente | Modelo | Funcao |
-|--------|--------|--------|
-| Deployer | Sonnet | Vercel, GitHub Actions, CI/CD |
+### Naipe 5: Deploy (Teclados)
+| Musico | Instrumento | Funcao |
+|--------|-------------|--------|
+| Deployer | Piano | Vercel, CI/CD |
 
-### Layer 6: Business
-| Agente | Modelo | Funcao |
-|--------|--------|--------|
-| Stripe | Sonnet | Pagamentos, subscriptions, webhooks |
-| Launcher | Sonnet | SEO, meta tags, analytics |
+### Naipe 6: Business (Vocal)
+| Musico | Instrumento | Funcao |
+|--------|-------------|--------|
+| Stripe | Tenor | Pagamentos, subscriptions |
+| Launcher | Soprano | SEO, marketing, lancamento |
 
-## Contratos de Agentes
+## A Partitura - Sistema de Contratos
 
-Cada agente opera sob um **contrato JSON** que define:
+Cada musico segue uma **partitura** (contrato JSON):
 
 ```json
 {
   "agent": "designer",
   "model": "sonnet",
-  "skill": "/designer",
   "role": "Elite UI/Visual Designer",
-  "capabilities": ["..."],
   "input_contract": {
     "required": ["project_brief"],
-    "optional": ["reference_url", "style_direction"]
+    "optional": ["reference_url"]
   },
   "output_contract": {
     "format": "json",
-    "schema": { "..." }
+    "schema": { "design_system": "..." }
   },
   "quality_gates": {
-    "complete_color_palette": true,
-    "typography_scale_min_sizes": 6
-  },
-  "timeout_ms": 90000,
-  "retry_on_fail": true
+    "complete_color_palette": true
+  }
 }
 ```
 
-## Skills Integrados
-
-O Elis integra os melhores skills do [SkillsMP](https://skillsmp.com):
+## Skills Integrados (Repertorio)
 
 | Skill | Stars | Funcao |
 |-------|-------|--------|
@@ -205,46 +214,37 @@ O Elis integra os melhores skills do [SkillsMP](https://skillsmp.com):
 | Supabase Automation | - | Backend completo |
 | Vercel Deploy | - | Deploy automatizado |
 
-## Design Standards 2026
+## Design Standards 2026 (O Som Contemporaneo)
 
-O Elis segue as tendencias de design mais atuais:
+Elis sempre foi a frente do seu tempo. Este orquestrador segue as tendencias mais atuais:
 
-- **Gradient Orbs** - Blurred gradients como decoracao
-- **Bento Grids** - Layouts assimetricos de cards
-- **Expressive Typography** - Headlines 48-96px, variable fonts
-- **Glass Morphism** - Blur 8-16px, backgrounds transparentes
-- **Noise Texture** - SVG noise overlay sutil
-- **Micro-interactions** - Hover effects, scroll animations
-
-## Requisitos
-
-- [Claude Code](https://claude.ai/code) instalado
-- Conta no Claude com acesso a Opus/Sonnet
-- (Opcional) Conta Supabase para backend
-- (Opcional) Conta Stripe para pagamentos
-- (Opcional) Conta Vercel para deploy
+- **Gradient Orbs** - Como as luzes de um palco
+- **Bento Grids** - Composicao visual harmonica
+- **Expressive Typography** - Headlines que cantam
+- **Glass Morphism** - Transparencia e profundidade
+- **Micro-interactions** - Cada hover e uma nota
 
 ## Estrutura do Projeto
 
 ```
 elis/
-├── elis.md              # Skill principal
+├── elis.md              # A partitura principal
 ├── README.md            # Este arquivo
 ├── LICENSE              # MIT License
 ├── CHANGELOG.md         # Historico de versoes
-├── examples/            # Exemplos de uso
+├── examples/            # Repertorio de exemplos
 │   ├── saas-landing.md
 │   ├── portfolio.md
 │   └── startup.md
-└── docs/                # Documentacao adicional
-    ├── contracts.md     # Detalhes dos contratos
-    ├── agents.md        # Guia dos agentes
-    └── customization.md # Como customizar
+└── docs/                # Manual do maestro
+    ├── contracts.md
+    ├── agents.md
+    └── customization.md
 ```
 
 ## Contribuindo
 
-Contribuicoes sao bem-vindas! Por favor:
+Contribuicoes sao bem-vindas! Junte-se a orquestra:
 
 1. Fork o repositorio
 2. Crie uma branch (`git checkout -b feature/nova-feature`)
@@ -254,12 +254,12 @@ Contribuicoes sao bem-vindas! Por favor:
 
 ## Roadmap
 
-- [ ] Suporte a mais frameworks (Vue, Svelte, SolidJS)
-- [ ] Integracao com Figma para import de designs
-- [ ] Agente de copywriting para conteudo
-- [ ] Agente de analytics para otimizacao
-- [ ] Dashboard de monitoramento de projetos
-- [ ] Suporte a PWA e mobile-first
+- [ ] Mais frameworks (Vue, Svelte, SolidJS)
+- [ ] Integracao com Figma
+- [ ] Agente de copywriting
+- [ ] Agente de analytics
+- [ ] Dashboard de projetos
+- [ ] Suporte a PWA
 
 ## Licenca
 
@@ -269,11 +269,18 @@ MIT License - veja [LICENSE](LICENSE) para detalhes.
 
 Criado por [@pheeliipe91](https://github.com/pheeliipe91)
 
+Em homenagem a **Elis Regina Carvalho Costa** (1945-1982)
+- "Aguas de Marco"
+- "Como Nossos Pais"
+- "O Bebado e a Equilibrista"
+- E tantas outras obras-primas
+
 Inspirado por:
 - [Anthropic Skills](https://github.com/anthropics/skills)
 - [SkillsMP](https://skillsmp.com)
-- [Google Multi-Agent Patterns](https://cloud.google.com/architecture)
 
 ---
 
-**Elis** - Transformando ideias em websites de classe mundial.
+> *"Eu sei que a minha voz pode ser pequena diante de tudo que esta acontecendo no mundo. Mas enquanto eu puder cantar, eu vou cantar."* - Elis Regina
+
+**Elis** - Regendo a orquestra de agentes para criar obras digitais de classe mundial.
