@@ -6,8 +6,8 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-gold.svg?style=for-the-badge)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue?style=for-the-badge)](https://claude.ai)
-[![Agents](https://img.shields.io/badge/Agents-10+-green?style=for-the-badge)]()
-[![Layers](https://img.shields.io/badge/Layers-6-purple?style=for-the-badge)]()
+[![Agents](https://img.shields.io/badge/Agents-10+-green?style=for-the-badge)](docs/agents.md)
+[![Layers](https://img.shields.io/badge/Layers-6-purple?style=for-the-badge)](#the-6-layers)
 
 *Named after [Elis Regina](https://en.wikipedia.org/wiki/Elis_Regina) (1945-1982), Brazil's greatest singer.
 Like a maestro conducting an orchestra, ELIS orchestrates specialized AI agents to create world-class web applications.*
