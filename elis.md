@@ -11,7 +11,7 @@ arguments:
     description: "URL, descrição do projeto ou path"
     required: false
   - name: options
-    description: "Opções: --reference, --stack, --output, --with-backend, --with-payments"
+    description: "Opções: --reference, --stack, --output, --with-backend, --with-payments, --mode onepage"
     required: false
 ---
 
@@ -757,6 +757,30 @@ Adiciona sistema de pagamentos.
 ```
 Stripe ──► Integration ──► Test
 ```
+
+### `/elis --mode onepage <description>`
+
+**Mode OnePage:** Pipeline otimizado para websites one-page (landing pages, microsites).
+Mesmo pipeline completo do Elis mas com constraints específicas:
+
+- **Build:** Single-page output (HTML/Astro one-pager)
+- **Design:** Hero-first, single scroll flow, CTA-focused
+- **Deploy:** Static hosting (Netlify/Vercel)
+- **Quality Gate extra:** Mobile-first responsive check
+
+**Exemplos:**
+```
+/elis --mode onepage "landing page pra KetoNow"
+/elis --mode onepage analyze https://linear.app
+/elis --mode onepage full "SaaS pricing page pra ProductX"
+```
+
+O mode onepage ativa automaticamente:
+- Componentes de landing: Hero, Features, Pricing, CTA, Footer
+- SVG icon system (NUNCA emojis como ícones)
+- Design tokens únicos por projeto (NUNCA template clone)
+- Light + dark mode obrigatório
+- Lighthouse >90 como quality gate
 
 ---
 
