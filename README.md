@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src=".github/social-preview.png" alt="ELIS — Multi-Agent Orchestrator" width="100%">
+
 # ELIS
 
 **Multi-agent orchestrator for Claude Code — 10+ agents across 6 layers, from idea to deployed product**
